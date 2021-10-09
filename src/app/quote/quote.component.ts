@@ -8,14 +8,16 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] =[
-    {id:1, name:'Life hacks, try coding!', author:'By Developer Anipher Chelsea'},
-    {id:2, name:'Make it work.make it right and fast!' , author:'By Kent Beck'},
-    {id:3, name:'Before software can be reusable it first has to be usable.', author:'By Ralph Johnson'},
-    {id:4, name:'Talk is cheap. Show me the code!' , author:'By Austin Freeman'},
-    {id:5, name:'You can turn coffee into code!', author:'By Martin Fawler'}
+    new Quote(1, 'Life hacks, try coding!', 'Author: Developer Anipher Chelsea'),
+    new Quote(2, 'Make it work.make it right and fast!' , 'Author: Kent Beck'),
+    new Quote(3, 'Before software can be reusable it first has to be usable.', 'Author: Ralph Johnson'),
+    new Quote(4, 'Talk is cheap. Show me the code!' , 'Author: Austin Freeman'),
+    new Quote(5, 'You can turn coffee into code!', 'Author: Martin Fawler'),
+  ];
+  toggleDetails(index: any){
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
 
-
-  ]
 
   constructor() { }
 
