@@ -9,11 +9,12 @@ import { Quote } from './quote';
 export class AppComponent{
   [x: string]: any;
   quotes:Quote[] =[
-    {id:1, name:'Life hacks, try coding!'},
-    {id:2, name:'Make it work.make it right and fast!'},
-    {id:3, name:'Before software can be reusable it first has to be usable.'},
-    {id:4, name:'Talk is cheap. Show me the code!'},
-    {id:5, name:'You can turn coffee into code!'}
+    new Quote(1, 'Life hacks, try coding!', 'Author: Developer Anipher Chelsea', new Date(2021,6,28) ),
+    new Quote(2, 'Make it work.make it right and fast!' , 'Author: Kent Beck', new Date (1978,12,1)),
+    new Quote(3, 'Before software can be reusable it first has to be usable.', 'Author: Ralph Johnson', new Date(1994,5,14)),
+    new Quote(4, 'Talk is cheap. Show me the code!' , 'Author: Austin Freeman', new Date (1985,9,27)),
+    new Quote(5, 'You can turn coffee into code!', 'Author: Martin Fawler', new Date (2001,4,19)),
+    
 
 
   ]
