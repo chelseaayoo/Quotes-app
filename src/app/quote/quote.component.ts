@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] =[
-    new Quote(1, 'Life hacks, try coding!', 'Author: Developer Anipher Chelsea', new Date(2021,6,28)),
+    new Quote(1, 'Life hacks, try coding!', 'Author: Developer Anipher Chelsea', new Date(2019,6,28)),
     new Quote(2, 'Make it work.make it right and fast!' , 'Author: Kent Beck', new Date (1978,12,1)),
     new Quote(3, 'Before software can be reusable it first has to be usable.', 'Author: Ralph Johnson', new Date(1994,5,14)),
     new Quote(4, 'Talk is cheap. Show me the code!' , 'Author: Austin Freeman', new Date (1985,9,27)),

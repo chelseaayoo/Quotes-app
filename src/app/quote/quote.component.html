@@ -1,12 +1,13 @@
-<div>
-    <h1>Coding Quotes</h1>
-    <hr>
-    <ul>
+<div class="container">
+  <h1>Coding Quotes</h1>
+  <hr>
+  <div class="row">
+      <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
-            <li>{{quote.name}} <br> Invented on {{quote.inventionDate|date|uppercase}}</li>
+            <div>
+            <h3>{{quote.name}}  <br> Invented on {{quote.inventionDate|date|uppercase}}</h3>
             <button (click)='toggleDetails(i)'>Quote Details</button>
+            </div>
+        <div *ngIf='quote.showAuthor'>    
             <app-quote-detail *ngIf='quote.showAuthor' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-
-          </div>
-    </ul>
-  </div>
+        </div>                   
