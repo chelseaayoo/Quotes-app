@@ -6,7 +6,10 @@
         <div class="form-group">
   
             <label for="name">Quote</label>
-            <textarea class="form-control" id="name"[(ngModel)]="newQuote.name" name="name" ></textarea><br>
+            <textarea class="form-control" id="name"[(ngModel)]="newQuote.name" name="name" #name='ngModel' required></textarea><br>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Type your quote.</p>
+    
             <!-- Testing to see if we get any data -->
           <!-- Display {{newQuote.name}} -->
 
@@ -15,19 +18,32 @@
         <div class="form-group">
   
             <label for="author">Author</label>
-            <textarea class="form-control" id="author"  required></textarea><br>
+            <textarea class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required></textarea><br>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Type the author's name.</p>
+            </div>
   
         </div>
         <div class="form-group">
-            <label for="completion">Invention date</label><br>
-            <input type='date' id="complete" required><br><br>
+            <label for="complete">Invention date</label><br>
+            <input type='date' id="complete"[(ngModel)]="newQuote.inventionDate" name="inventionDate" #inventionDate='ngModel'  required><br><br>
+            <div [hidden]="inventionDate.valid || inventionDate.pristine" class="alert alert-danger">
+                <p>Indicate when the quote was invented.</p>
+            </div>
   
         </div>
         <div class="form-group">
             <label for="publisher">Publisher</label>
-            <textarea class="form-control" id="publisher"  required></textarea><br>
+            <textarea class="form-control" id="publisher" [(ngModel)]="newQuote.author" name="publisher" #publisher='ngModel' required></textarea><br>
+            <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                <p>Type the publisher's name.</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="completion">Date of publish</label><br>
-            <input type='date' id="complete" required>      
+            <input type='date' id="completion" [(ngModel)]="newQuote.inventionDate" name="inventionDate" #inventionDate='ngModel' required>
+            <div [hidden]="inventionDate.valid || inventionDate.pristine" class="alert alert-danger">
+                <p>Indicate the date of publishing.</p>
+            </div>
+        
   </div>
