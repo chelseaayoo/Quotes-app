@@ -1,5 +1,7 @@
-<p>{{quote.author}}</p>
-<p>This quote was invented {{quote.inventionDate|dateCount}} years ago.</p>
+<p>Author:{{quote.author}}</p>
+<p>Invented on: {{quote.inventionDate|date|uppercase}} </p>
+<p>Age of the quote: {{quote.inventionDate|dateCount}} years.</p>
+<p>Submitted by: {{quote.publisher}}</p>
 <div class="col-md-6">
     <i (click)='likeBtnClick()' class="far fa-grin-alt fa-2x"></i>
     {{likes}}  &nbsp;&nbsp;&nbsp;
