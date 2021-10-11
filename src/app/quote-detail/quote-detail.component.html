@@ -1,3 +1,9 @@
 <p>{{quote.author}}</p>
 <p>This quote was invented {{quote.inventionDate|dateCount}} years ago.</p>
+<div class="col-md-6">
+    <i (click)='likeBtnClick()' class="far fa-grin-alt fa-2x"></i>
+    {{likes}}  &nbsp;&nbsp;&nbsp;
+      <i (click)='dislikeBtnClick()' class="fas fa-angry fa-2x"></i>
+    {{dislikes}}
+</div>
 <button (click)= 'quoteDelete(true)'class="btn btn-outline-danger" >Delete Quote</button>
