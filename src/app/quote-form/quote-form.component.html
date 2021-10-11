@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid add">
     <h2 class="text-center">Create a new Quote</h2>
     <hr>
     <form (ngSubmit)='submitQuote()'  #quoteForm='ngForm'>
@@ -29,7 +29,10 @@
         <div class="form-group">
   
             <label for="publisher">Publisher's name</label>
-            <textarea class="form-control" id="publisher" required></textarea><br>
+            <textarea class="form-control" id="publisher"[(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel"  required></textarea><br>
+            <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                <p>Type the publisher</p>
+              </div>
         </div>
         <div class="form-group">
   

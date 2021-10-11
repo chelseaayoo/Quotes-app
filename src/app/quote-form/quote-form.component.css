@@ -1,0 +1,8 @@
+.add{
+    padding: 3rem;
+    background-color: rgb(163, 228, 198);
+    border-radius: 30px;
+}
+.add:hover {
+    box-shadow: 0 0 10px rgba(1, 56, 56, 0.6), 0 0 20px rgba(1, 56, 56, 0.6), 0 0 20px rgba(1, 56, 56, 0.6);
+}

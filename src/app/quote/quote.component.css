@@ -1,0 +1,9 @@
+.papers{
+    padding: 3rem;
+    background-color: teal;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+}
+.papers:hover {
+    box-shadow: 0 0 10px rgba(80, 14, 14, 0.6), 0 0 20px rgba(80, 14, 14, 0.6), 0 0 20px rgba(80, 14, 14, 0.6);
+}
