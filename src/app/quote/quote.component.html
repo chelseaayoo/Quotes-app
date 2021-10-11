@@ -22,9 +22,11 @@
   
     <div class="row">
       <div class="col-md-6">
-        <div *ngFor='let quote of quotes;let i = index'>
+        <div *ngFor='let quote of quotes;let i = index' class="papers">
           <div>
-            <h6>{{quote.name}} <br> Invented on  {{quote.inventionDate|date|uppercase}}</h6>
+            <h2> <strong> {{quote.name}}</strong></h2>
+            <p><i class="fas fa-pen-alt"></i> {{quote.author}}</p>
+            <!-- <p>Invented on  {{quote.inventionDate|date|uppercase}}<p> -->
             <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Detail</button>
           </div>
   
